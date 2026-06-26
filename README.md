@@ -17,11 +17,11 @@ The pipeline utilizes a strict engine-level isolation split (80/20) to prevent t
    * *Status:* Highly accurate but uninterpretable (Black Box).
 2. **Glass-Box Model:** Temporal Attention BiLSTM + SHAP
    * **Test RMSE:** 19.59 cycles
-   * *Status:* Physically auditable. The model trades a marginal 2.8 cycles of accuracy to unlock cycle-level temporal attention matrices and SHAP-based feature attribution, allowing engineers to verify the physical logic behind every prediction.
+   * *Status:* Physically auditable. The model trades a quantifiable 2.88 cycles of accuracy to unlock cycle-level temporal attention matrices and SHAP-based feature attribution, allowing engineers to verify the physical logic behind every prediction.
 
 ## Execution Pipeline
 To reproduce the methodology, run the Jupyter Notebooks in the following order:
 1. `01_Data_Exploration.ipynb`: Generates sliding windows and physical sensor masks.
 2. `02_Model_Training.ipynb`: Trains the Advanced BiLSTM and establishes the safety baseline.
-3. `03_XAI_Extraction.ipynb`: Trains the Attention BiLSTM and extracts `.npy` arrays for game-theory validation.
+3. `03_XAI_Extraction.ipynb`: Trains the Attention BiLSTM and extracts `.npy` arrays for SHAP-based feature attribution.
 4. `04_Visualization_and_Validation.ipynb`: Calculates the NASA PHMS08 Asymmetric Score and generates the Thermodynamic Attention Overlays.
