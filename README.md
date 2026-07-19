@@ -19,7 +19,7 @@ The pipeline utilizes a strict engine-level isolation split (80/20) to prevent t
    * **Test RMSE:** 19.59 cycles
    * *Status:* Physically auditable. The model trades a quantifiable 2.88 cycles of accuracy to unlock cycle-level temporal attention matrices and SHAP-based feature attribution, allowing engineers to verify the physical logic behind every prediction.
   
-> **Note on Reproducibility:** Reported results were obtained using GPU (CUDA) training. PyTorch does not guarantee bit-for-bit identical results between CPU and GPU execution, even with a fixed random seed, due to differences in underlying floating-point math libraries (cuDNN vs. MKL/oneDNN). Re-running these notebooks on CPU-only hardware may therefore produce slightly different RMSE values; qualitative findings, including the SHAP sensor importance ranking, remain consistent across hardware.
+> **Note on Reproducibility:** Reported results were obtained using GPU (CUDA) training. PyTorch does not guarantee bit-for-bit identical results between CPU and GPU execution, even with a fixed random seed, due to differences in underlying floating-point math libraries (cuDNN vs. MKL/oneDNN). Re-running these notebooks on CPU only hardware may therefore produce slightly different RMSE values. Qualitative findings, including the SHAP sensor importance ranking, remain consistent across hardware.
 
 ## Execution Pipeline
 To reproduce the methodology, run the Jupyter Notebooks in the following order:
